@@ -1,0 +1,47 @@
+﻿@model UserVM;
+@{
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login Page</title>
+</head>
+<body>
+
+    <div style="text-align:center;align-items:center">
+
+        <h1>LogIn</h1>
+        <div style="align-items:center;text-align:center">
+            <form method="post" style="align-items:center;text-align:center">
+                <table width="40%" align="center" cellpadding="10">
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                            <input id="email" asp-for="Email" type="email" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">Password</label>
+                            <input id="password" asp-for="Password" type="password" />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td><input type="submit" id="btn1" name="btn1" value="Login" />
+                    </tr></td>
+
+
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+
+

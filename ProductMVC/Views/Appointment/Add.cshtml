@@ -1,0 +1,84 @@
+﻿@model AppointmentVM;
+@{
+    ViewData["Title"] = "Add";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+
+    <div style="text-align:center;align-items:center">
+
+        <h1>Schedule Appointment</h1>
+        <div style="align-items:center;text-align:center">
+            <form method="post" style="align-items:center;text-align:center">
+                <table width="40%" align="center" cellpadding="10" style="align-items:center;text-align:center">
+
+                    <tr hidden>
+                        <th>
+                            Id
+                        </th>
+                        <td>
+                            <input asp-for="AppointmentId" type="number" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            name
+                        </th>
+                        <td>
+                            <input asp-for="AppointmentName" type="text" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Email
+                        </th>
+                        <td>
+                            <input asp-for="AppointmentEmail" type="email" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Title
+                        </th>
+                        <td>
+                            <input asp-for="AppointmentTitle" type="text" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            Appointmnet Date
+                        </th>
+                        <td>
+                            <input asp-for="AppointmentDate" type="date" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" id="btn1" name="btn1" value="Add Appointment" />
+                        </td>
+                    </tr>
+
+                </table>
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
+
+

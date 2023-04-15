@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ProductDAL.EntityLayer.Appointment> ;
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div style="text-align:center;">
+
+
+
+    <h1>Appointment</h1>
+    <div>
+        <form action="" method="post">
+            <table width="40%" align="center" cellpadding="10" style="align-items:center;text-align:center">
+                <tr>
+                    <td>
+                        <input type="text" id="searchTxt" name="searchTxt">
+                    </td>
+                    <td><button type="submit">search</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <table width="40%" align="center" cellpadding="5" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Title</th>
+            <th>Date</th>
+            @*<th>Category</th>*@
+            <th>Action</th>
+        </tr>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.Title</td>
+                <td>@item.AptDate.ToLongDateString()</td>
+                @*<td>@item.User.Email</td>*@
+                <td><a asp-controller="appointment" asp-action="delete" asp-route-id="@item.Id">Delete</a></td>
+            </tr>
+        }
+
+    </table>
+
+    <button><a href="/aptdata/add"> Add Appointmet</a></button>
+
+
+</div>
